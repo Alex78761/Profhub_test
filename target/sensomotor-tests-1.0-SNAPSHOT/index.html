@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тесты сенсомоторных реакций</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Тесты сенсомоторных реакций</h1>
+            <div id="userControls">
+                <button id="loginButton">Войти</button>
+                <button id="registerButton">Регистрация</button>
+            </div>
+        </header>
+
+        <div id="testSelection">
+            <h2>Выберите тест</h2>
+            <button class="test-button" data-test-type="visual">Тест на визуальную реакцию</button>
+            <button class="test-button" data-test-type="audio">Тест на аудиальную реакцию</button>
+            <button class="test-button" data-test-type="choice">Тест на реакцию выбора</button>
+            <button class="test-button" data-test-type="math">Тест на сложение в уме (чет/нечет)</button>
+        </div>
+
+        <div id="testArea"></div>
+        <div id="resultsContainer"></div>
+
+        <!-- Модальное окно входа -->
+        <div id="loginModal" class="modal">
+            <div class="modal-content">
+                <h2>Вход</h2>
+                <form id="loginForm">
+                    <input type="text" name="username" placeholder="Имя пользователя" required>
+                    <input type="password" name="password" placeholder="Пароль" required>
+                    <button type="submit">Войти</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Модальное окно регистрации -->
+        <div id="registerModal" class="modal">
+            <div class="modal-content">
+                <h2>Регистрация</h2>
+                <form id="registerForm">
+                    <input type="text" name="username" placeholder="Имя пользователя" required>
+                    <input type="password" name="password" placeholder="Пароль" required>
+                    <select name="role" required>
+                        <option value="USER">Пользователь</option>
+                        <option value="EXPERT">Эксперт</option>
+                    </select>
+                    <select name="gender" required>
+                        <option value="M">Мужской</option>
+                        <option value="F">Женский</option>
+                    </select>
+                    <input type="date" name="birthDate" required>
+                    <button type="submit">Зарегистрироваться</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/auth.js"></script>
+    <script src="js/tests.js"></script>
+</body>
+</html> 
