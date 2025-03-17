@@ -1,0 +1,298 @@
+/* Общие стили */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    color: #333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Стили для заголовка */
+header {
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #eaeaea;
+}
+
+h1 {
+    margin: 0;
+    color: #1a73e8;
+    font-weight: 500;
+}
+
+h2 {
+    color: #202124;
+    font-weight: 500;
+}
+
+/* Стили для кнопок */
+.button, button {
+    background-color: #1a73e8;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 5px;
+    transition: all 0.2s ease;
+}
+
+.button:hover, button:hover {
+    background-color: #1765cc;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Стили для модальных окон */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 1000;
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 10% auto;
+    padding: 30px;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 400px;
+    position: relative;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Стили для форм */
+input, select {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 16px;
+    transition: border 0.2s;
+}
+
+input:focus, select:focus {
+    border-color: #1a73e8;
+    outline: none;
+}
+
+/* Стили для тестовой области */
+#testArea {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    background-color: #ffffff;
+    margin: 20px 0;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.stimulus {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.stimulus:hover {
+    transform: scale(1.05);
+}
+
+#instructions {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 10px 15px;
+    border-radius: 8px;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 80%;
+    font-size: 14px;
+    z-index: 10;
+}
+
+.countdown {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 72px;
+    font-weight: bold;
+    color: #1a73e8;
+}
+
+#resultsContainer {
+    text-align: center;
+    padding: 30px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+#resultsContainer h2 {
+    color: #202124;
+    margin-bottom: 20px;
+}
+
+#resultsContainer p {
+    font-size: 18px;
+    margin: 15px 0;
+    color: #5f6368;
+}
+
+#resultsContainer button {
+    margin-top: 25px;
+}
+
+/* Стили для кнопок выбора теста */
+.test-button {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    margin: 12px 0;
+    background-color: #1a73e8;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.2s ease;
+    text-align: left;
+    position: relative;
+}
+
+.test-button:hover {
+    background-color: #1765cc;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.test-button:after {
+    content: "→";
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+}
+
+/* Стили для теста на реакцию выбора */
+#instructions ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 5px 0;
+    text-align: left;
+    font-size: 13px;
+}
+
+#instructions li {
+    margin: 5px 0;
+    display: flex;
+    align-items: center;
+}
+
+.color-sample {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin-right: 10px;
+    border: 1px solid #e0e0e0;
+}
+
+/* Стили для теста на сложение в уме */
+#math-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 250px;
+}
+
+#math-problem {
+    font-size: 48px;
+    font-weight: 500;
+    margin-bottom: 30px;
+    background-color: white;
+    padding: 25px 50px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    color: #202124;
+}
+
+#math-buttons {
+    display: flex;
+    gap: 20px;
+}
+
+#even-button, #odd-button {
+    padding: 15px 30px;
+    font-size: 18px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    min-width: 120px;
+}
+
+#even-button {
+    background-color: #1a73e8;
+    color: white;
+}
+
+#odd-button {
+    background-color: #202124;
+    color: white;
+}
+
+#even-button:hover {
+    background-color: #1765cc;
+}
+
+#odd-button:hover {
+    background-color: #303134;
+}
+
+/* Стили для контейнера с кнопками тестов */
+.test-buttons-container {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+#testSelection {
+    text-align: center;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    margin-bottom: 30px;
+}
+
+#testSelection h2 {
+    margin-bottom: 20px;
+    font-weight: 400;
+} 
